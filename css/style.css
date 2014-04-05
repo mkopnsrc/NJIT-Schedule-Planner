@@ -1,0 +1,453 @@
+/* CSS reset */
+html { font-size:100%; height:100%; }
+body,p,ul,ol,dl,dt,dd,iframe { margin:0; padding:0; font-size:1em; line-height:inherit; font-weight:inherit; color:inherit; border:none; }
+input[type=button],input[type=submit],button { overflow:visible; }
+input[disabled],select[disabled],textarea[disabled],button[disabled] { opacity:0.65; }
+header,nav,section,aside,footer { display:block; }
+
+/* Basic type and styles */
+body {
+	background:#030334;
+	font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;
+	color:#fff;
+	font-size:0.9em; 
+	line-height:1.4;
+	position:relative;
+}
+body#contents {
+	width: 1020px;
+	margin: 0 auto;
+}
+header {
+	background:#a8171c url(http://www.njit.edu/welcomecenter/uicomponents/images/header.jpg) -130px -25px no-repeat;	
+	height: 125px;
+	width: 100%;
+	z-index:499;
+	overflow-y: hidden;
+}
+	header h1 {
+		margin: 0 0 0 0;
+		padding: 15px 0 0 10px;
+		opacity: 0.9;
+	}
+	header h1 a img {
+		border: 0;
+	}
+	header div#courses_cart {
+		top: 5px;
+		right: 10px;
+		position: absolute;
+		z-index: 999;
+	}
+	header div#nav_menu {
+		margin: 2px 0 0 10px;
+		text-shadow: 0 2px 10px rgba(0,0,0, .3);
+		color: #fff;
+	}
+		header div#nav_menu span.nav_l a {
+			float: left;
+			color: #fff;
+			font-size: 16px;
+			background:#a8171c;
+			font-variant:small-caps;
+			text-decoration:none;
+			margin: 0px 8px 0 8px;
+			padding: 0 8px;
+		}
+		header div#nav_menu span.nav_r a {
+			float: right;
+			color: #fff;
+			font-size: 16px;
+			background:#a8171c;
+			font-variant:small-caps;
+			text-decoration:none;
+			margin: 0px 8px 0 8px;
+			padding: 0 8px;
+		}
+		header div#nav_menu span.nav_l a:hover, 
+		header div#nav_menu span.nav_r a:hover {
+			color: #FCF894;
+			background: #c00;
+			margin: 0px 8px;
+			line-height: 25px;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+		header div#courses_cart span a:hover , header div#courses_cart span a img {
+			color: #FCF894;
+			line-height: 25px;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+		header div#courses_cart span a img { width: auto; height: auto; }
+#features {
+	margin-top: 5px;
+	background:#a8171c url(../img/tiles.png) 12px -422px;
+	width: 100%;
+	height:auto;
+}
+	#features div#selection {
+		width: 100%;
+		height: 55px;
+		line-height: 55px;
+	}
+		#features input, #features select {
+			background: #a8171c !important;
+			margin: 13px 0 0 0;
+			padding: 2px 4px 2px 4px;
+			width: 225px;
+			height: 25px;
+			font-family: tahoma, verdana, sans-serif;
+			font-size: 1.2em;
+			color: #fff;
+			border-radius: 6px;
+			outline:none;
+			transition: all 0.4s ease-in-out;
+			-webkit-transition: all 0.4s ease-in-out;
+			-moz-transition: all 0.4s ease-in-out;
+		}
+		#features select {
+			width: 225px;
+			height: 30px;
+			text-transform:capitalize;
+		}
+	#features div#searchby {
+		height: 55px;
+		line-height: 55px;
+	}
+	#features div#searchby input {
+		text-indent: 3px;
+	}
+	#features div#filters {
+		
+		height: 75px;
+	}
+		div#filters fieldset legend {
+			margin: 0 0 0 5px;
+			padding: 0 7px 0 7px;
+			background: #030334;
+			box-shadow: 0px 0px 2px gray;
+			border: 1.5px solid #F7F7F9;
+			vertical-align: middle;
+		}
+		div#filters fieldset {
+			margin: 10px 20px 0 20px;
+			padding: 3px;
+			width: auto;
+			display: block;
+			border-radius: 3px;
+			box-shadow: 0px 0px 2px #FFF;
+		}
+		div#filters input[type="checkbox"], div#filters input[type="radio"] {
+			position: relative;			
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+		div#filters span {
+			color: #fff;
+			display: inline-block;
+			font-size: 15px;
+			height: 20px;
+			vertical-align: bottom;
+			text-shadow: 0px 0px 2px #ACACAC;
+		}
+		div#filters fieldset.days span {width: 55px; }
+		div#filters fieldset.time span {width: 35px; }
+		div#filters fieldset.time {margin: 5px 20px 0 20px; padding: 0 20px 0 20px; float: left;}
+		div#filters fieldset.days { float: left; margin: 5px 20px 0 20px; padding: 0 0px 0 20px; width: 580px; }
+	
+/* sections display contents */
+div#contents, div#schedule {
+	margin: 5px 0 0 0;
+	background: rgb(200,198,212);
+	background: #ddd url(http://www.webdesignerwall.com/demo/css3-dropdown-menu/img/gradient.png) repeat-x 0 0;
+	border: solid 1px #b4b4b4;
+	width: 100%;
+	height: auto;
+	min-height: 400px;
+	color: #000;
+}
+form #courselist {
+	text-align: center;
+}
+/*form #courselist tr:hover {
+	-webkit-transform: scale(1.1);
+  	-moz-transform: scale(1.1);
+  	-o-transform: scale(1.1);
+  	-moz-box-shadow:3px 5px 7px rgba(0,0,0,.7);
+  	-webkit-box-shadow: 3px 5px 7px rgba(0,0,0,.7);
+  	box-shadow:3px 5px 7px rgba(0,0,0,.7);
+}*/
+form #courselist input[type="radio"]{
+	margin: 9px;
+}
+
+div#schedule {
+	padding: 0 0 25px 0;
+}
+
+/* border radius */
+.bradius,
+header div#nav_menu span.nav_l a, 
+header div#nav_menu span.nav_r a,
+header div#nav_menu span.nav_l a:hover, 
+header div#nav_menu span.nav_r a:hover {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+	box-shadow: 0 1px 3px rgba(0,0,0, .3);
+}
+/* overlay background for popup */
+#overlay {background-image:url(./images/overlay/transparent.png); color:#efefef;}
+div.contentWrap {height:500px; overflow-y:auto;}
+
+/* = STEPS CONTAINER
+----------------------------*/
+.wizard-steps {
+	left: 10%;
+    padding:0px;
+    position: relative;
+    clear:both;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.wizard-steps div {
+    position:relative;
+	float: left;
+	margin-right: 25px;
+}
+/* = STEP NUMBERS
+----------------------------*/
+.wizard-steps span {
+    display: block;
+    float: left;
+    font-size: 10px;
+    text-align:center;
+    width:20px;
+    margin: 15px 5px 0px 0px;
+    line-height:20px;
+    color: #ccc;
+    background: #FFF;
+    border: 3px solid #CCC;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+}
+ 
+/* = DROPDOWN BOX COMPLETED STEPS
+---------------------------- */
+.wizard-steps .completed-step span {
+    border: 3px solid #fff;
+	background:#030334;
+    color: #fff;
+	font-size: 16px;
+    text-shadow:none;
+}
+/* = DROPDOWN BOX ACTIVE STEPS
+----------------------------*/
+.wizard-steps .active-step span {
+    color: #163038;
+	font-size: 16px;
+    -webkit-box-shadow:0px 0px 2px rgba(0,0,0, 0.8);
+    -moz-box-shadow:0px 0px 2px rgba(0,0,0, 0.8);
+    box-shadow:0px 0px 2px rgba(0,0,0, 0.8);
+    text-shadow:none;
+    border: 3px solid #A3C1C9;
+}
+/* = DROPDOWN BOX HOVER STATES
+----------------------------*/
+.wizard-steps .completed-step:hover span {
+	color:  #00FF00;
+	font-size: 16px;
+}
+/* = Added Course Details in popup 
+-----------------------------------*/
+.button {
+	background-color:#a8171c;
+	border-radius:10px;
+	box-shadow:0 2px 3px rgba(0,0,0,0.3);
+	color:#fff;
+	cursor:pointer;
+	display:inline-block;
+	text-align:center;
+	text-decoration:none;
+	padding:10px 20px;
+}
+.button.small {
+	border-radius:15px;
+	float:right;
+	margin:22px 5px 0;
+	padding:6px 15px;
+}
+
+.button:hover {
+	background-color:#1e1e1e;
+}
+
+.button>span {
+	font-size:84%;
+}
+
+.button.bClose {
+	border-radius:7px 7px 7px 7px;
+	box-shadow:none;
+	font:bold 131% sans-serif;
+	position:absolute;
+	right:-12px;
+	top:-13px;
+	padding:0 6px 2px;
+}
+.popup {
+	background-color:#fff;
+	border-radius:10px 10px 10px 10px;
+	box-shadow:0 0 25px 5px #998;
+	color:#111;
+	display:none;
+	min-width:650px;
+	padding:10px 0 5px 0;
+}
+.popup {
+	min-height:300px;
+	max-height:400px;
+}
+div#cart_details span#titlebar {
+	margin: 2px 1px 0 1px;
+	padding: 10px 0 0 0;
+	background:#a8171c;
+	display: block;
+	height:40px;
+	vertical-align: middle;
+	line-height: 40px;
+	text-indent: 10px;
+	font:bold 130% sans-serif;
+	color: #fff;
+}
+div#cart_details div#added_courses {
+	margin: 5px 1px;
+	height: inherit;
+	overflow: hidden;
+	/* border: 1px solid blue; */
+}
+div#added_courses {
+	list-style-type: none;
+	text-indent: 10px;
+}
+div#added_courses li {
+	cursor: pointer;
+	margin-left: 20px;
+	position: relative;
+	margin-left: -4px;
+	padding-left: 28px;
+	height: 30px;
+	list-style-type: none;
+	background: url(http://findicons.com/files//icons/1715/gion/24/dialog_close.png) no-repeat left center;
+	line-height: 30px;
+}
+div#added_courses li:hover {
+	/*background: #B8B8B8 !important; */
+	opacity: 0.5;
+}
+div#added_courses li a.remove {
+	position: absolute;
+	top: 0px;
+	left: -30px;
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	background: url(http://findicons.com/files//icons/1715/gion/24/dialog_close.png) no-repeat left center;
+	cursor: pointer;
+}
+div#added_courses li a.remove:hover {
+	opacity: 0.5;
+}
+#clearall {
+	margin-top: 10px;
+}
+div#clearall button, div#save button {
+	font-family: Nunito, Verdana, sans-serif;
+	margin: 10px 5px;
+	padding: 2px 10px;
+	float: right;
+	border: 0;
+	box-shadow: 0px 0px 4px black;
+	border-radius: 5px; 
+	text-shadow: 0px 0px 1px #F5A6A6;
+	color: #111;
+	height: 25px;
+	font-weight: bold;
+	background: #f85032;
+	background: -moz-linear-gradient(top, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f85032), color-stop(50%,#f16f5c), color-stop(51%,#f6290c), color-stop(71%,#f02f17), color-stop(100%,#e73827));
+	background: -webkit-linear-gradient(top, #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%);
+	background: -o-linear-gradient(top, #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%);
+	background: -ms-linear-gradient(top, #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%);
+	background: linear-gradient(top, #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 );
+	cursor: pointer;
+}	
+div#clearall button:hover, div#save button:hover {
+	text-shadow: 0px 0px 1px #F5A6A6;
+	color: #2f2f2f;
+	background: #f96247;
+	background: -moz-linear-gradient(top, #f96247 0%, #f37f6d 50%, #f73d25 51%, #f2452e 71%, #e94b3d 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f96247), color-stop(50%,#f37f6d), color-stop(51%,#f73d25), color-stop(71%,#f2452e), color-stop(100%,#e94b3d));
+	background: -webkit-linear-gradient(top, #f96247 0%,#f37f6d 50%,#f73d25 51%,#f2452e 71%,#e94b3d 100%);
+	background: -o-linear-gradient(top, #f96247 0%,#f37f6d 50%,#f73d25 51%,#f2452e 71%,#e94b3d 100%);
+	background: -ms-linear-gradient(top, #f96247 0%,#f37f6d 50%,#f73d25 51%,#f2452e 71%,#e94b3d 100%);
+	background: linear-gradient(top, #f96247 0%,#f37f6d 50%,#f73d25 51%,#f2452e 71%,#e94b3d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f96247', endColorstr='#e94b3d',GradientType=0 );
+}
+
+/* = Draw Schedule Grid
+----------------------------*/
+
+#table_agenda {
+	position: relative;
+	width: 1002px;
+}
+#table_agenda .thead {
+	background: #a8171c;
+	color: #fff;
+	font-weight: bold;
+}
+#table_agenda .row {
+	width: 100%;
+	padding: 7px 9px 7px 9px;
+	height: 1em;
+}
+#table_agenda .row div {
+	float: left;
+	width: 15.3%;
+	text-align: center;
+}
+#table_agenda .row .time {
+	background: #a8171c;
+	color: #fff;
+	width: 8%;
+}
+#table_agenda .alt {
+	background: #B8B8B8 !important;
+}
+.overlays {
+	z-index: 9998;
+}
+/* Overlay GoogleMap 
+========================*/
+span#mapTooltip:hover {
+	cursor: pointer;
+}
+#map-canvas {
+	background-color:#dedede;
+	position:absolute;
+	left:-2000px;
+	top: 200px;
+	padding:5px;
+	width:400px;
+	height:300px;
+	z-index: 9999;
+	border:1px solid #fff;
+}
