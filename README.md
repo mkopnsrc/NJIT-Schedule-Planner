@@ -7,7 +7,7 @@
 ## General info
 
 Goal of this course was to create a major project of NJIT Courses Planner in a group of 3-4 students.
-Demo of this project can be found here [NJIT Planner](https://njitplanner.opnsrc.dev)
+Demo of this project can be found here [NJIT Planner](https://mahesh.life/njit-planner/)
 
 ## Built With
 This project was built using following:
