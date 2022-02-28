@@ -19,4 +19,4 @@ This project was built using following:
 * AJAX
 * MySQL
 
-this is just a test commit
+this is just a test commit from local via http
